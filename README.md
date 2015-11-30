@@ -44,7 +44,7 @@ penultimo(R,[_|T]) :- penultimo(R, T), !.
 >   - Parada: Devolver la variable penúltima del array.
 >   - Recursión: Ir recorriendo el array a tráves de su cola hasta que se de la condición de parada.  
 
->![imagen](https://github.com/gcpmendez/IA_Prolog/blob/master/penultimo.JPG?raw=true)
+>![imagen](https://github.com/gcpmendez/IA_Prolog/blob/master/images/penultimo.JPG?raw=true)
 
 > Casos especiales no definidos:
 >   - penultimo(X,[1]).  
@@ -67,12 +67,15 @@ mcd(A,B,R):-
       mcd(A,Aux,R),
       !.
 mcd(A,_,R):-
-      mcd(_,A,R),!.
+      mcd(_,A,R),
+      !.
 ```
-> Explicación:
+> Explicación: Aquí todo depende de si A<=>B. Con una traza gráfica se entiende todo mejor:  
+
+> mcd(7, 5, R).
 
 
->![imagen](https://github.com/gcpmendez/IA_Prolog/blob/master/mcd.JPG?raw=true)
+>![imagen](https://github.com/gcpmendez/IA_Prolog/blob/master/images/mcd.JPG?raw=true)
 
 
 
@@ -85,7 +88,7 @@ selecciona(X,[H|T],[H|TT]) :-
 >   - Parada: Hay un T(lista obtenida) que es el resultado de elimnar la ocurrencia X en [X|T].
 >   - Recursión: con el comando **trace.** vemos como va actuando. Se trata que desde que encuentre la ocurrencia se añade la cola al resultado y vuelve recursivamente añadiendo los elementos del Head quitados anteriormente.
 >
->![imagen](https://github.com/gcpmendez/IA_Prolog/blob/master/Selecciona.JPG?raw=true)
+>![imagen](https://github.com/gcpmendez/IA_Prolog/blob/master/images/Selecciona.JPG?raw=true)
 
 ```
 par([]).
@@ -97,7 +100,7 @@ par([_,_|T]) :-
 >   - Recursión: Va quitando dos variables en el array y si es vacío entra en la condición
 de parada dando true y si no da false ya que posee un elemento.
 
->![imagen](https://github.com/gcpmendez/IA_Prolog/blob/master/par.JPG?raw=true)
+>![imagen](https://github.com/gcpmendez/IA_Prolog/blob/master/images/par.JPG?raw=true)
 
 ## Ayúdame a mejorar este trabajo
 
