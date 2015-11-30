@@ -8,6 +8,7 @@ Este práctica ha sido desarrollado en la asignatura de
 ## Descripción de la práctica
 Debe definirse e implementar un programa mediante el lenguaje de programación
 Prolog para la resolución de cada uno de los siguientes problemas:  
+  
 1. Definir el predicado penultimo(X, L) que se verifique si X es el penúltimo elemento
 de la lista L.
 > Ejemplo: penultimo(X, [1,2,3,4]).
