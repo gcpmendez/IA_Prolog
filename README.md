@@ -92,6 +92,8 @@ par([_,_|T]) :-
 >   - Recursión: Va quitando dos variables en el array y si es vacío entra en la condición
 de parada dando true y si no da false ya que posee un elemento.
 
+>![imagen](https://github.com/gcpmendez/IA_Prolog/blob/master/par.JPG?raw=true)
+
 ## Ayúdame a mejorar este trabajo
 
 Cada **bugs** que encuentres házmelo saber a [gcpmendez@gmail.com](mailto:gcpmendez@gmail.com)
