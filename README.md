@@ -71,6 +71,11 @@ mcd(A,_,R):-
 ```
 > Explicación:
 
+
+>![imagen](https://github.com/gcpmendez/IA_Prolog/blob/master/mcd.JPG?raw=true)
+
+
+
 ```
 selecciona(X,[X|T],T).
 selecciona(X,[H|T],[H|TT]) :-
