@@ -7,7 +7,7 @@ Este práctica ha sido desarrollado en la asignatura de
 
 ## Descripción de la práctica
 Debe definirse e implementar un programa mediante el lenguaje de programación
-Prolog para la resolución de cada uno de los siguientes problemas:
+Prolog para la resolución de cada uno de los siguientes problemas:  
 1. Definir el predicado penultimo(X, L) que se verifique si X es el penúltimo elemento
 de la lista L.
 > Ejemplo: penultimo(X, [1,2,3,4]).
@@ -49,6 +49,7 @@ false.
 >   - penultimo(X,[]).  
 false.
 
+
 ```
 mcd(A,B,R):-
       A==B,
@@ -74,32 +75,9 @@ selecciona(X,[H|T],[H|TT]) :-
 ```
 > Explicación:
 >   - Parada: Hay un T(lista obtenida) que es el resultado de elimnar la ocurrencia X en [X|T].
->   - Recursión:
+>   - Recursión: con el comando **trace.** vemos como va actuando. Se trata que desde que encuentre la ocurrencia se añade la cola al resultado y vuelve recursivamente añadiendo los elementos del Head quitados anteriormente.
 >
->>>[trace] 20 ?- trace.  
-true.
-
-[trace] 20 ?- selecciona(a, [c,d,a,b,a], L).
-   Call: (7) selecciona(a, [c, d, a, b, a], _G2769) ? creep
-   Call: (8) selecciona(a, [d, a, b, a], _G2854) ? creep
-   Call: (9) selecciona(a, [a, b, a], _G2857) ? creep
-   Exit: (9) selecciona(a, [a, b, a], [b, a]) ? creep
-   Exit: (8) selecciona(a, [d, a, b, a], [d, b, a]) ? creep
-   Exit: (7) selecciona(a, [c, d, a, b, a], [c, d, b, a]) ? creep
-L = [c, d, b, a] ;
-   Redo: (9) selecciona(a, [a, b, a], _G2857) ? creep
-   Call: (10) selecciona(a, [b, a], _G2860) ? creep
-   Call: (11) selecciona(a, [a], _G2863) ? creep
-   Exit: (11) selecciona(a, [a], []) ? creep
-   Exit: (10) selecciona(a, [b, a], [b]) ? creep
-   Exit: (9) selecciona(a, [a, b, a], [a, b]) ? creep
-   Exit: (8) selecciona(a, [d, a, b, a], [d, a, b]) ? creep
-   Exit: (7) selecciona(a, [c, d, a, b, a], [c, d, a, b]) ? creep
-L = [c, d, a, b] .
-
-Va quitando dos variables en el array y si es vacío entra en la condición
-de parada dando true y si no da false ya que posee un elemento.
-
+>![imagen](https://github.com/gcpmendez/IA_Prolog/blob/master/Selecciona.JPG?raw=true)
 
 ```
 par([]).
