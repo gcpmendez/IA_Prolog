@@ -1,3 +1,9 @@
+% Verifique si Z es el máximo común divisor de X e Y:
+% Parámetros:
+% - Elemento X.
+% - Elemento Y.
+% - Elemento Z que devuelve el mcd de X e Y.
+
 mcd(A,B,R):-
       A==B,
       R is A.
